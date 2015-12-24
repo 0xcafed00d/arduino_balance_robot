@@ -60,12 +60,14 @@ v1_t mulVector(v1_t v, scale_t scale) {
 
 template <typename type, size_t sz>
 class RunningAverage {
- private:
+   private:
   type m_data[sz];
   size_t m_pos;
 
- public:
-  RunningAverage() : m_pos(0) { memset(m_data, 0, sizeof(type) * sz); }
+   public:
+  RunningAverage() : m_pos(0) {
+    memset(m_data, 0, sizeof(type) * sz);
+  }
 
   void operator<<(type v) {
     m_pos = (m_pos + 1) % sz;

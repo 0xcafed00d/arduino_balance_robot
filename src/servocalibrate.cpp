@@ -1,6 +1,7 @@
 #include "servocalibrate.h"
 
-ServoCalState::ServoCalState() : drive(&leftServo, &rightServo) {}
+ServoCalState::ServoCalState() : drive(&leftServo, &rightServo) {
+}
 
 void ServoCalState::update() {
   drive.setServoConfig(cd.lconfig, cd.rconfig);

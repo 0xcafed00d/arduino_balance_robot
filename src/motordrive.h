@@ -9,13 +9,13 @@ struct ServoConfig {
 };
 
 class MotorDrive {
- private:
+   private:
   ServoConfig m_lconf;
   ServoConfig m_rconf;
   Servo* m_lservo;
   Servo* m_rservo;
 
- public:
+   public:
   MotorDrive(Servo* lservo, Servo* rservo);
   void setServoConfig(const ServoConfig& lconf, const ServoConfig& rconf);
 

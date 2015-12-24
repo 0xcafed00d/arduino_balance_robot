@@ -16,17 +16,21 @@ struct State {
 };
 
 struct NullState : public State {
-  inline void enter() {}
+  inline void enter() {
+  }
 
-  inline void action() {}
+  inline void action() {
+  }
 
-  inline void leave() {}
+  inline void leave() {
+  }
 };
 
 struct StateMachine {
   State* currentState;
 
-  inline StateMachine() : currentState(NULL) {}
+  inline StateMachine() : currentState(NULL) {
+  }
   void stateGoto(State* state);
   void stateAction();
 };

@@ -52,7 +52,8 @@ struct MenuState : public State {
     twirly &= 3;
   }
 
-  void leave() {}
+  void leave() {
+  }
 };
 
 MenuState menuState;

@@ -13,24 +13,24 @@
 #include "config.h"
 
 struct BalanceState : public State {
-  Adafruit_BNO055* imu;
+    Adafruit_BNO055* imu;
 
-  Servo leftServo;
-  Servo rightServo;
+    Servo leftServo;
+    Servo rightServo;
 
-  ConfigData cd;
-  MotorDrive drive;
+    ConfigData cd;
+    MotorDrive drive;
 
-  double pidTarget;
-  double pidInput;
-  double pidOutput;
+    double pidTarget;
+    double pidInput;
+    double pidOutput;
 
-  PID pid;
+    PID pid;
 
-  BalanceState(Adafruit_BNO055* imu);
-  void enter();
-  void action();
-  void leave();
+    BalanceState(Adafruit_BNO055* imu);
+    void enter();
+    void action();
+    void leave();
 };
 
 #endif

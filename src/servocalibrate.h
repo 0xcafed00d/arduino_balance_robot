@@ -10,17 +10,17 @@
 #include "config.h"
 
 struct ServoCalState : public State {
-  Servo leftServo;
-  Servo rightServo;
+	Servo leftServo;
+	Servo rightServo;
 
-  ConfigData cd;
-  MotorDrive drive;
+	ConfigData cd;
+	MotorDrive drive;
 
-  ServoCalState();
-  void update();
-  void enter();
-  void action();
-  void leave();
+	ServoCalState();
+	void update();
+	void enter();
+	void action();
+	void leave();
 };
 
 #endif

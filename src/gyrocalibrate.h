@@ -9,12 +9,12 @@
 #include "state.h"
 
 struct GyroCalState : public State {
-  Adafruit_BNO055* imu;
+	Adafruit_BNO055* imu;
 
-  GyroCalState(Adafruit_BNO055* imu);
-  void enter();
-  void action();
-  void leave();
+	GyroCalState(Adafruit_BNO055* imu);
+	void enter();
+	void action();
+	void leave();
 };
 
 #endif

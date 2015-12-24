@@ -1,6 +1,7 @@
 #include "gyrocalibrate.h"
 
-GyroCalState::GyroCalState(Adafruit_BNO055* imu) : imu(imu) {}
+GyroCalState::GyroCalState(Adafruit_BNO055* imu) : imu(imu) {
+}
 
 void GyroCalState::enter() {
   Serial.println(F("\n\nEntering: Gyro Offest Calibration"));
@@ -31,4 +32,5 @@ void GyroCalState::action() {
   }
 }
 
-void GyroCalState::leave() {}
+void GyroCalState::leave() {
+}

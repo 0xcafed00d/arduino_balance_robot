@@ -1,18 +1,23 @@
 
 #include "state.h"
 
-void State::stateGoto(State* state) { sm->stateGoto(state); }
+void State::stateGoto(State* state) {
+	sm->stateGoto(state);
+}
 
 void StateMachine::stateGoto(State* state) {
-  state->sm = this;
+	state->sm = this;
 
-  if (currentState) currentState->leave();
+	if (currentState)
+		currentState->leave();
 
-  currentState = state;
+	currentState = state;
 
-  if (currentState) currentState->enter();
+	if (currentState)
+		currentState->enter();
 }
 
 void StateMachine::stateAction() {
-  if (currentState) currentState->action();
+	if (currentState)
+		currentState->action();
 }
